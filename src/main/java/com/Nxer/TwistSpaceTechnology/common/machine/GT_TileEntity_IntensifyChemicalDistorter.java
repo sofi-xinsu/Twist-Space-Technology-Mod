@@ -44,6 +44,9 @@ import com.gtnewhorizon.structurelib.structure.IStructureDefinition;
 import com.gtnewhorizon.structurelib.structure.ISurvivalBuildEnvironment;
 import com.gtnewhorizon.structurelib.structure.StructureDefinition;
 
+
+
+
 import gregtech.api.GregTechAPI;
 import gregtech.api.enums.HeatingCoilLevel;
 import gregtech.api.gui.modularui.GTUITextures;
@@ -113,11 +116,11 @@ public class GT_TileEntity_IntensifyChemicalDistorter
         return StatCollector.translateToLocal("IntensifyChemicalDistorter.mode." + machineMode);
     }
     
+
     @Override
     public RecipeMap<?> getRecipeMap() {
-        return GTCMRecipe.IntensifyChemicalDistorterRecipes;
-    // if (machineMode == 0) return GTCMRecipe.IntensifyChemicalDistorterRecipes;
-    // return RecipeMaps.multiblockChemicalReactorRecipes;
+        if (this.machineMode == 0) return GTCMRecipe.IntensifyChemicalDistorterRecipes;
+        return RecipeMaps.multiblockChemicalReactorRecipes;
     }
 
     @NotNull
