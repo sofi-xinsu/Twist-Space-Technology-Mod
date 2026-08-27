@@ -115,8 +115,9 @@ public class GT_TileEntity_IntensifyChemicalDistorter
     
     @Override
     public RecipeMap<?> getRecipeMap() {
-    if (machineMode == 0) return GTCMRecipe.IntensifyChemicalDistorterRecipes;
-    return RecipeMaps.multiblockChemicalReactorRecipes;
+        return GTCMRecipe.IntensifyChemicalDistorterRecipes;
+    // if (machineMode == 0) return GTCMRecipe.IntensifyChemicalDistorterRecipes;
+    // return RecipeMaps.multiblockChemicalReactorRecipes;
     }
 
     @NotNull
